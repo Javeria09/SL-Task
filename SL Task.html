@@ -1,0 +1,35 @@
+<html>
+<head></head>
+<body>
+<script>
+function student(name, age,semester)
+{ this.name=name;
+  this.age=age;
+  this.semester=semester;
+  
+ 
+}
+var std1=new student("Ali",23,"1st");
+var std2=new student("Nida",20,"2nd");
+var std3=new student("Aman",24,"3rd");
+console.log(std1);
+console.log(std2);
+console.log(std3);
+
+
+student.prototype.Program = "mcs";
+std1.Program="Mcs1";
+std2.Program="Mcs2";
+std3.Program="Mcs3";
+
+Object.defineProperty(student, "Program", {value : "mcs"});
+
+var ar = [std1,std2,std3];
+console.log(ar);
+
+
+
+var inp=prompt("input");
+
+</script>
+</html>
